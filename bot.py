@@ -58,7 +58,7 @@ def terminal(bot, update):
 	except Exception as err:
 		return update.effective_message.reply_text("Error: " + str(err))
 
-def status(bot, update):
+def cek(bot, update):
 	pesan = "**Info server:**\n"
 	pesan += "Nama PC: `{}`\n".format(socket.gethostname())
 	pesan += "User: `{}`\n".format(getpass.getuser())
@@ -71,11 +71,11 @@ def status(bot, update):
 	update.effective_message.reply_text(pesan, parse_mode=ParseMode.MARKDOWN)
 
 start_handler = CommandHandler("start", start)
-status_handler = CommandHandler("status", status)
+cek_handler = CommandHandler("cek", cek)
 handler = MessageHandler(Filters.private, terminal)
 
 dispatcher.add_handler(start_handler)
-dispatcher.add_handler(status_handler)
+dispatcher.add_handler(cek_handler)
 dispatcher.add_handler(handler)
 
 __log__ = logging.getLogger()
