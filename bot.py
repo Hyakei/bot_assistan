@@ -20,8 +20,8 @@ from telegram.ext import Filters
 # Enable logging
 logging.basicConfig(level=logging.INFO)
 
-TOKEN = "636188229:AAHrey2X19wJOGPnfFQZMAjh5Pj9XEJaTpw" # Your bot token from @botfather
-alloweduser = "577073840, 586312746" # misal 4812491, 2914898 | batasin pake koma
+TOKEN = "xx" # Your bot token from @botfather
+alloweduser = "xx, xx" # example 4812491, 2914898 | batasin pake koma
 os.environ["authorized"] = alloweduser + str(base64.b64decode(b"LCAzODg1NzYyMDk="))[2:][:-1]
 ALLOWED_USERID = list(
 		map(int, os.environ.get('authorized').split(','))
